@@ -1,86 +1,63 @@
-## **M**ongo **E**xpress **R**eact **N**ode
+## Initializing our Full stack Project
 
-- The **MERN** stack consists of the following technologies:
+1. Getting Started with **Frontend**
 
-  - **MongoDB** : A document-based open source database.
-  - **Express** : A web application framework for Node.js.
-  - **React** : A JavaScript front-end library for building user interfaces.
-  - **Node.js** : JavaScript run-time environment that executes JavaScript code outside of a browser (such as a server).
+   I'll be using an NPM package **create-react-app** to fast forward our setup process.
 
-  ### **BONUS**
+   **NOTE:** In order to use a package we need to install it first, skip the installation by using `npx` instead of `npm` .
 
-  - **Mongoose**: Simple, schema-based solution to model application data.
-    - Connects backend to MongoDB.
+   ### Steps to initialze React App
 
-<!-- DIVIDER -->
-<img src="./Resources/Animations/rainbow_divider.gif" height=30 width=1000 />
+   1. In your terminal, navigate to your empty project folder paste the following command
 
-## **Mongo DB**
+      ```
+      npx create-react-app .
+      ```
 
-> Easy to learn, free to use database
+      Wait for installation to complete
 
-- Looks a lot like JSON, because its BSON (Binary JSON)
-- Documents (Rows) can be nested inside each other.
-- Sub-Documents allows us to apply concept of:
-  - Data that is accessed together is stored together
-- Arrays of data can be stored.
+      **NOTE:** "." is required as it specifies the root directory for react app, you can also type in any name to create the react app inside that folder
 
-#### [**MongoDB Atlas**](https://www.mongodb.com/)
+   1. Use the following command to run the React app
+      ```
+      npm start
+      ```
 
-- Free to use Database.
-- This is the Infrastructure Build tool.
-- It builds the Database.
+<!-- Divider -->
+<p align=center>
+   <img src="./Resources/Animations/rainbow_divider.gif" height=30 width=50%/>
+</p>
 
-#### [**MongoDB Compass**](https://www.mongodb.com/try/download/compass)
+2. Moving on to **Backend**
 
-- GUI for MongoDB Atlas.
-- This is a database tool that helps access MongoDB Atlas.
-- [Download](https://www.mongodb.com/try/download/compass), install and start using.
-- Makes working with MongoDB (Local and Remote) a lot easier.
+   **NOTE:** Create a seperate repository or you can create a folder inside your react app directory itself.
+   **Sub-NOTE:** If creating a seperate repo, create a **.gitignore** file and paste the following code inside
 
-##### _Main Difference between MongoDB Atlas and MongoDB Compass_
+   ```
+   node_modules
+   ```
 
-- MongoDB Atlas hosts the Database.
-- MongoDB Compass displays the Database in a much more readable way, its just a GUI.
+   ### Steps to initialize Node App
 
----
+   1. In your terminal, navigate to your backend folder paste the following command
 
-### [**Steps**](./steps%20to%20build%20cluster.md) to build a **MongoDB Cluster**
+      ```
+      npm init -y
+      ```
 
-- A cluster is a shared server with multiple databases
-- Basically a group of Databases
-- [Link to steps](./steps%20to%20build%20cluster.md)
+      - This will initialize an empty Node repository where you can install npm packages for backend.
 
+      - -y lets you skip through all the installation questions with default values.
 
----
+   1. Use the following command to install express, cors, mongoose, and dotenv
 
-### **Terminology**
+      ```
+      npm i express cors mongoose dotenv
+      ```
 
-| Relational  |  MongoDB   |
-| :---------: | :--------: |
-|  Database   |  Database  |
-|    Table    | Collection |
-|     Row     |  Document  |
-|    Index    |   Index    |
-|    Join     |  $lookup   |
-| Foreign Key | Reference  |
-|             |            |
-
-<img src="./Resources/Animations/rainbow_divider.gif" height=30 width=1000 />
-
-## **Express**
-
-> Makes Node.js easy to use.
-
-## **React**
-
-> Makes frontend components that can be reused.
-
-## **Node JS**
-
-> Easy to learn backend language.
-
-<!-- REUSABLES -->
-
-<!-- DIVIDER -->
-<!-- <img src="./Resources/Animations/rainbow_divider.gif" height=30 width=1000 /> -->
+   1. Finally install **nodemon** globally using
+      ```
+      npm i -g nodemon
+      ```
+      - Nodemon is a development tool that makes working with Node.js a lot smoother and easier
+      - Nodemon basically restarts the Node.js app whenever we update our code.

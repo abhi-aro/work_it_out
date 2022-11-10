@@ -71,10 +71,30 @@
 
 > Makes Node.js easy to use.
 
+- Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js.
+- Backend Framework based on `MVC` architecture.
+- Node JS is the actual language, Express is a framework based on that language.
+- Improves routing, easier handling of request and responses, middleware, server-side rendering.
+
+<img src="./Resources/Animations/rainbow_divider.gif" height=30 width=1000 />
+
 ## **React**
 
 > Makes frontend components that can be reused.
 
+- Front-end JavaScript Library.
+- React is declarative, efficient, and flexible JavaScript Library.
+- Create complex components that can be used anywhere.
+- React component is a JSX file.
+- JSX is converted to HTML when it goes through preprocessing.
+
+<img src="./Resources/Animations/rainbow_divider.gif" height=30 width=1000 />
+
 ## **Node JS**
 
 > Easy to learn backend language.
+
+- Back-end JavaScript **Run time Environment**.
+- Executes JavaScript code outside of Browser, which was impossible before node.js.
+
+<img src="./Resources/Animations/rainbow_divider.gif" height=30 width=1000 />

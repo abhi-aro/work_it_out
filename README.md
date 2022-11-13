@@ -2,6 +2,8 @@
 
 > This repo contains [free code camp's MERN stack project](https://youtu.be/7CqJlxBYj-M) with my personal notes and documentation on how to get started.
 
+**NOTE:** FreeCodeCamp's video has Class based code, whereas I use Functional Programming.
+
 ### Table of Content
 
 1. [Intro to MERN](./Documentation/MERN.md)

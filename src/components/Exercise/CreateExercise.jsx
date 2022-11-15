@@ -18,7 +18,7 @@ const CreateExercise = () => {
 
   useEffect(() => {
     (async () => {
-      let res = await axios.get("http://localhost:8000/users/");
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/users/`);
       setUsers(
         res?.data.length > 0 ? res?.data.map((user) => user.username) : []
       );
@@ -36,9 +36,9 @@ const CreateExercise = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    let res = await axios.post("http://localhost:8000/exercises/add", exercise);
+    let res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/exercises/add`, exercise);
 
-    console.log(res);
+    // console.log(res);
     window.location = "/";
   };
 

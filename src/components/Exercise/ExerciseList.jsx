@@ -7,14 +7,14 @@ const ExerciseList = () => {
 
   useEffect(() => {
     (async () => {
-      let res = await axios.get("http://localhost:8000/exercises/");
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/exercises/`);
       setExercises(res.data);
     })();
   }, []);
 
   const deleteExercise = async (id) => {
-    const deleted = await axios.delete("http://localhost:8000/exercises/" + id);
-    console.log(deleted.data);
+    const deleted = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/exercises/` + id);
+    // console.log(deleted.data);
     setExercises(exercises.filter((el) => el._id !== id));
   };
 

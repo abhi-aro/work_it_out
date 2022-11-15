@@ -20,9 +20,9 @@ const CreateUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    let res = await axios.post("http://localhost:8000/users/add", user);
+    let res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/add`, user);
 
-    console.log(res);
+    // console.log(res);
     resetUser();
   };
 

@@ -20,19 +20,16 @@ const EditExercise = () => {
 
   useEffect(() => {
     (async () => {
-      let res = await axios.get(`http://localhost:8000/exercises/${id}`);
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/exercises/${id}`);
       setExercise({
         username: res?.data?.username,
         description: res?.data?.description,
         duration: res?.data?.duration,
         date: new Date(res?.data?.date),
       });
-      setUsers(
-        res?.data.length > 0 ? res?.data.map((user) => user.username) : []
-      );
     })();
     (async () => {
-      let res = await axios.get("http://localhost:8000/users/");
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/users/`);
       setUsers(
         res?.data.length > 0 ? res?.data.map((user) => user.username) : []
       );
@@ -50,11 +47,11 @@ const EditExercise = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     let res = await axios.post(
-      `http://localhost:8000/exercises/update/${id}`,
+      `${process.env.REACT_APP_BACKEND_URL}/exercises/update/${id}`,
       exercise
     );
 
-    console.log(res);
+    // console.log(res);
     window.location = "/";
   };
 
